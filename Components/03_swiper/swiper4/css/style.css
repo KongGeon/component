@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/* swiper */
+.swiper {
+  width: calc(100% - 100px);
+  height: 60px;
+}
+.swiper04 > .s__container > .s__row {
+  position: relative;
+}
+.swiper-slide01 {
+  background-color: #a7a7a7;
+}
+.swiper-slide02 {
+  background-color: #828282;
+}
+.swiper-slide03 {
+  background-color: #5b5b5b;
+}
+.swiper-slide .s__container{
+  height: 100%;
+}
+.swiper-slide .s__row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.swiper-button-prev:after, .swiper-button-next:after{
+  content: '';
+  width: 40px;
+  height: 40px;
+}
+.swiper-button-prev:after{
+  background: url(../image/icon_left_arrow.svg) no-repeat;
+  background-size: contain;
+}
+.swiper-button-next:after{
+  background: url(../image/icon_right_arrow.svg) no-repeat;
+  background-size: contain;
+}
+.swiper-pagination-bullet-active{
+  background-color: #fff;
+}
+.swiper-pagination-bullet{
+  width: 80px;
+  border-radius: 0;
+  height: 3px;
+}
+/* swiper 끝 */
