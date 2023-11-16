@@ -1,0 +1,272 @@
+@charset "utf-8";
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"] {
+  padding: 12px 18px;
+  border-radius: 5px;
+  border: 1px solid #c2c2c2;
+  font-size: 16px;
+  min-height: 50px;
+  width: 100%;
+}
+.s__select {
+  -webkit-appearance: none; /* for chrome */
+  -moz-appearance: none; /*for firefox*/
+  appearance: none;
+  background: url("../image/icon_down_arrow.svg") no-repeat 97% 50%/18px auto;
+  background-color: #fff;
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #c2c2c2;
+  font-size: 16px;
+  min-height: 50px;
+}
+.s__select::-ms-expand {
+  display: none; /*for IE10,11*/
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.phone-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+.s__checkbox-wrap,
+.s__radio-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.s__checkbox,
+.s__radio {
+  display: flex;
+  align-items: center;
+}
+.s__checkbox + .s__checkbox,
+.s__radio + .s__radio {
+  margin-left: 16px;
+}
+.s__checkbox input + label {
+  width: 24px;
+  height: 24px;
+  display: block;
+  background: url(../image/icon_checkbox_off.svg);
+  background-size: contain;
+  cursor: pointer;
+}
+.s__checkbox input:disabled + label {
+  background: url(../image/icon_checkbox_off_disabled.svg);
+  background-size: contain;
+}
+.s__checkbox input:checked + label {
+  background: url(../image/icon_checkbox_on.svg);
+  background-size: contain;
+}
+.s__checkbox input:checked:disabled + label {
+  background: url(../image/icon_checkbox_on_disabled.svg);
+  background-size: contain;
+}
+.s__checkbox input + label + label {
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.s__radio input + label {
+  width: 24px;
+  height: 24px;
+  display: block;
+  background: url(../image/icon_radio_off.svg);
+  background-size: contain;
+  cursor: pointer;
+}
+.s__radio input:disabled + label {
+  background: url(../image/icon_radio_off_disabled.svg);
+  background-size: contain;
+}
+.s__radio input:checked + label {
+  background: url(../image/icon_radio_on.svg);
+  background-size: contain;
+}
+.s__radio input:checked:disabled + label {
+  background: url(../image/icon_radio_on_disabled.svg);
+  background-size: contain;
+}
+.s__radio input + label + label {
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+/* 데이트피커 */
+.s__date, .s__date-range{
+    background: url(../image/icon_date.svg) no-repeat 97% 50%/18px auto;
+}
+/* 싱글파일 */
+
+
+.s__singlefile-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.s__singlefile-list {
+  width: calc(100% - 88px);
+}
+.s__singlefile-wrap .file__get__list__name {
+  background-color: var(--backgroun);
+
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  margin-left: 8px;
+  width: 100%;
+  height: 42px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+/* 멀터파일 */
+.s__file-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.s__file-list > li {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  position: relative;
+  height: 48px;
+  margin: 6px 5px;
+  padding: 0 24px;
+  border-radius: 24px;
+}
+.file__get__list__name {
+  font-size: 14px;
+  font-weight: 400;
+  color: #222;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 1;
+  margin-right: 12px;
+  letter-spacing: -0.56px;
+}
+.file__get__list__name + button span {
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+.file__get__list__name + button::before,
+.file__get__list__name + button::after {
+  width: 14px;
+  height: 2px;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #ccc;
+  border-radius: 2px;
+}
+.file__get__list__name + button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.file__get__list__name + button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.file__get__list__name + button {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+/* 텍스트에어리어 */
+.s__textarea {
+  padding: 12px 18px;
+  border-radius: 5px;
+  border: 1px solid #c2c2c2;
+  font-size: 16px;
+  min-height: 50px;
+  width: 100%;
+  resize: none;
+  box-sizing: border-box;
+}
+.use__application__textarea__addinfo {
+  display: flex;
+  justify-content: space-between;
+}
+.use__application__textarea__addinfo li {
+  font-size: 16px;
+}
+.textarea__text__check {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+  line-height: 19px;
+  margin-top: 8px;
+  text-align: right;
+}
+/* 버튼 */
+.s__file-wrap .s__btn {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 1px solid var(--main);
+  color: var(--main);
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  width: 80px;
+  text-align: center;
+}
+
+/* 토글스위치 */
+.toggleSwitch {
+    width: 46px;
+    height: 24px;
+    display: block;
+    position: relative;
+    border-radius: 30px;
+    background-color: #fff;
+    border: 1px solid var(--border);
+    cursor: pointer;
+  }
+  
+  .toggleSwitch .toggleButton {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: var(--black);
+  }
+  
+  #toggle:checked ~ .toggleSwitch {
+    background: var(--main);
+  }
+  
+  #toggle:checked ~ .toggleSwitch .toggleButton {
+    left: calc(100% - 19px);
+    background: #fff;
+  }
+  
+  .toggleSwitch, .toggleButton {
+    transition: all 0.2s ease-in;
+  }
+/* PC (해상도 1024px)*/
+@media all and (min-width: 1024px) {
+}
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (max-width: 1023px) {
+}
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@media all and (max-width: 767px) {
+}
