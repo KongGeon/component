@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="s__container">
+        <div class="s__row">
+            <button class="js-popup-open" data-popid="popupModal01">검색모달</button>
+        </div>
+    </div>
+    <div id="popupModal01" class="popup__section search-popup">
+        <div class="popup__dim"></div>
+        <div class="popup__inner">
+            <div class="popup__container__group --popup">
+                <div class="popup__header__group">
+                    <h2 class="popup__header__title"></h2>
+                    <button class="popup__header__close js-popup-close">
+                        <span class="screen-out">닫기</span>
+                    </button>
+                </div>
+
+                <div class="popup__contents__group js-popup-scroll ps">
+                    <div class="top-search-box">
+                        <form>
+                            <div class="top-search">
+                                <input type="text">
+                                <button><img src="../image/icon_search.svg" alt="검색" title="검색"></button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                    <div class="top-search-pop">
+                        <p>인기검색어 : </p>
+                        <a href="">aaaaa</a>
+                        <a href="">bbbbb</a>
+                        <a href="">ccccc</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

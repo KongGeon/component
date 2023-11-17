@@ -123,10 +123,18 @@ li.active > .pc-menu__step3 {
   background-color: #fff;
 }
 .mobile-menu__step1 {
-  display: block;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 16px;
   border-bottom: 1px solid var(--border);
+}
+.mobile-menu__step1 img {
+  width: 24px;
+  transition: all 0.3s;
+}
+.mobile-menu__step1.menu-on > img {
+  transform: rotate(180deg);
 }
 .mobile-menu__step1.menu-on + ul {
   display: block;
@@ -135,15 +143,21 @@ li.active > .pc-menu__step3 {
 .mobile-menu__step2 {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
-  padding: 12px;
+  padding: 16px;
+}
+.mobile-menu__step2 img {
+  width: 24px;
+  transition: all 0.3s;
 }
 .mobile-menu__step1.menu-on + ul {
   border-bottom: 1px solid var(--border);
   background-color: #f7f7f7;
 }
-
+.mobile-menu__step2.menu-on > img {
+  transform: rotate(180deg);
+}
 .icon-menu-off {
   display: none;
 }

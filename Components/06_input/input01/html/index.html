@@ -16,6 +16,8 @@ initial-scale=1.0">
 
 <body>
     <div style="width: 600px; margin: 0 auto;">
+        <p>사이즈</p>
+        <input type="text" class="s__input s__input-small s__text" placeholder="스몰">
         <p>셀렉트</p>
         <select name="" id="" class="s__select">
             <option value="" disabled>선택안됨</option>
@@ -42,7 +44,7 @@ initial-scale=1.0">
         <div class="s__textarea-wrap js-text-count-group">
             <div class="s__textarea__group">
                 <textarea name="textarea" id="" class="s__textarea js-text-count" data-max="5000" rows="5"
-                    title="내용을 5000자 이하로 작성해주세요" placeholder="문의 내용을 5000자 이하로 작성해주세요"></textarea>
+                    title="내용을 5000자 이하로 작성해주세요" placeholder="내용을 5000자 이하로 작성해주세요"></textarea>
             </div>
             <div class="use__application__textarea__addinfo">
                 <ul>
@@ -77,8 +79,8 @@ initial-scale=1.0">
                 <option value="">010</option>
                 <option value="">011</option>
             </select>
-            <input type="number" maxlength="4" oninput="checkMaxLength(this)">
-            <input type="number" maxlength="4" oninput="checkMaxLength(this)">
+            <input type="number" class="s__input" maxlength="4" oninput="checkMaxLength(this)">
+            <input type="number" class="s__input" maxlength="4" oninput="checkMaxLength(this)">
         </div>
         <p>토글스위치</p>
         <div class="s__switch">
