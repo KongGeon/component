@@ -115,3 +115,47 @@ function handlerTextCount() {
 textCounts.forEach((elem) => {
     elem.addEventListener("keyup", handlerTextCount);
   });
+
+
+  // 체크박스
+  const checkTotalBtns = document.querySelectorAll(".s__checkbox-total");
+  const checkBtns = document.querySelectorAll(".s__checkbox-ck");
+
+  function handlerAgrTotal() {
+    const totalArea = this.closest(".s__checkbox-wrap");
+    const checkboxList = totalArea.querySelectorAll(".s__checkbox-ck");
+
+    checkboxList.forEach((ckbox) => {
+      if (this.checked) {
+        ckbox.checked = true;
+        ckbox.value = "Y";
+      } else {
+        ckbox.checked = false;
+        ckbox.value = "N";
+      }
+    });
+  }
+
+  function handlerAgrCheck() {
+    const totalArea = this.closest(".s__checkbox-wrap");
+    const total = totalArea.querySelector(".s__checkbox-total");
+    const checkboxes = totalArea.querySelectorAll(".s__checkbox-ck");
+    const checkboxSelect =
+      totalArea.querySelectorAll(".s__checkbox-ck:checked");
+
+    if (checkboxes.length === checkboxSelect.length) {
+      total.checked = true;
+      total.value = "Y";
+    } else {
+      total.checked = false;
+      total.value = "N";
+    }
+  }
+
+  checkTotalBtns.forEach((total) => {
+    total.addEventListener("click", handlerAgrTotal);
+  });
+
+  checkBtns.forEach((ck) => {
+    ck.addEventListener("click", handlerAgrCheck);
+  });

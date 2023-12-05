@@ -1,4 +1,4 @@
-// tab01
+// 아코디언
 const accordionAList = document.querySelectorAll(".s__accordion01 a");
 const accordionList = document.querySelectorAll(".s__accordion01");
 accordionAList.forEach((e) => {

@@ -197,6 +197,9 @@ option03 = {
         name: "Direct",
         type: "bar",
         data: [1, 2, 20, 34, 39, 290, 20],
+        // itemStyle: {
+        //   borderRadius: [0, 20, 20, 0], //라디오스
+        // }
       },
   ],
 };
