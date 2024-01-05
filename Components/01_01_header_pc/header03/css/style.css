@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* header */
+header {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  background-color: #fff;
+}
+header .s__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+.menu-link {
+  display: flex;
+  height: 100%;
+}
+.menu-link > li > a {
+  cursor: pointer;
+}
+.menu-link a:hover {
+  color: var(--main);
+}
+.pc-menu__step1 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+.pc-menu__step1 > a{
+  font-weight: 500;
+}
+.pc-menu {
+  height: 60px;
+}
+.menu-right a:hover {
+  color: var(--main);
+}
+.menu-right a + a {
+  margin-left: 24px;
+}
+.pc-menu__step1 > div {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  position: absolute;
+  width: 100%;
+  top: calc(100%);
+  left: 0;
+  background-color: #fff;
+  display: none;
+  height: 300px;
+}
+.pc-menu__step1.active > div {
+  display: block;
+}
+.pc-menu__step1 > div > div {
+  display: flex;
+  height: 100%;
+}
+.sub-menu-title{
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.sub-menu-title h3{
+  font-size: 24px;
+  font-weight: 800;
+}
+.sub-menu-title p{
+  opacity: 0.3;
+}
+.pc-menu__step1 > div > div > div {
+  width: 25%;
+  height: 100%;
+  border-right: 1px solid var(--border);
+}
+.pc-menu__step2 {
+  position: relative;
+}
+.pc-menu__step3 {
+  width: 100%;
+  position: absolute;
+  right: -100%;
+  top: 0;
+  display: none;
+}
+li.active > .pc-menu__step3 {
+  display: block;
+}
+
+.pc-menu__step2 a {
+  width: calc(100% - 8px);
+  display: block;
+  padding: 16px 16px;
+  margin: 4px;
+  border-radius: 8px;
+}
+.pc-menu__step2 > ul > li:hover > a,
+.pc-menu__step2 > ul > li:focus > a {
+  background-color: #eeeeee3e;
+}
+.pc-menu__step2 a:hover,
+.pc-menu__step2 a:focus {
+  background-color: #eeeeee3e;
+}
+@media (max-width: 1600px) {
+}
+@media (max-width: 1366px) {
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 768px) {
+  .pc-menu {
+    display: none;
+  }
+}
