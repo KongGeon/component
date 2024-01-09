@@ -1,4 +1,4 @@
-// tab01
+// tab02
 const tabList02 = document.querySelectorAll('.s__tab02-title')
 const tabContents02 = document.querySelectorAll('.s__teb-contents')
 tabList02.forEach(e => {

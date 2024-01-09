@@ -1,10 +1,11 @@
 @charset "utf-8";
 /* header */
-header {
+header.s__header{
   position: fixed;
   width: 100%;
   border-bottom: 1px solid var(--border);
   background-color: #fff;
+  top: 0;
 }
 header .s__row {
   display: flex;

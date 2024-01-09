@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* tab */
 .s__tab01-wrap{
     padding-top: 50px;
     position: relative;
@@ -63,6 +64,8 @@
 .s__tab01-more-btn img {
     width: 24px;
 }
+/* tab 끝*/
+
 /* PC (해상도 1024px)*/
 @media all and (min-width: 1024px) {
 }
