@@ -1,9 +1,20 @@
 //input 숫자 최대 개수
-function checkMaxLength(object) {
-  if (object.value.length > object.maxLength) {
-    object.value = object.value.slice(0, object.maxLength);
-  }
+// function checkMaxLength(object) {
+//   if (object.value.length > object.maxLength) {
+//     object.value = object.value.slice(0, object.maxLength);
+//   }
+// }
+const phoneNum = document.querySelectorAll('.s__input_phone')
+for (let i = 0; i < phoneNum.length; i++) {
+  const p = phoneNum[i];
+  p.addEventListener('input', function (e) {
+    const object = e.target
+    if (object.value.length > object.maxLength) {
+      object.value = object.value.slice(0, object.maxLength);
+    }
+  })
 }
+
 //싱글 파일첨부
 const fileUploads = document.querySelectorAll('input[type="file"]:not([multiple])');
 if (fileUploads) {
@@ -12,9 +23,15 @@ if (fileUploads) {
             let file = fileInput.files;
             const fileName = file[0].name
             const fileSize = (file[0].size / (1024 * 1024)).toFixed(1);
-            fileInput.parentNode.parentNode.querySelector('.s__singlefile-list').innerHTML = `
-            <p class="file__get__list__name">${fileName} (${fileSize}MB)</p>
-            `
+             // p 태그 생성
+          const fileGetListName = document.createElement("p");
+          fileGetListName.className = "file__get__list__name";
+          fileGetListName.textContent = `${fileName} (${fileSize}MB)`;
+          fileInput.parentNode.parentNode.querySelector('.s__singlefile-list').innerHTML = ''//초기화
+          fileInput.parentNode.parentNode.querySelector('.s__singlefile-list').appendChild(fileGetListName);
+            // fileInput.parentNode.parentNode.querySelector('.s__singlefile-list').innerHTML = `
+            // <p class="file__get__list__name">${fileName} (${fileSize}MB)</p>
+            // `
 
         })
     })
