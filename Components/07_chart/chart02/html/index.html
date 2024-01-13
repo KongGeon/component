@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>chart</title>
-    <link rel="stylesheet" href="/공통코드/css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-</head>
+    <link rel="stylesheet" href="/공통코드/css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="s__container">
-        <div class="s__row">
-            <h1>chart.js</h1>
-            <!-- 선차트 -->
-            <h1>선차트</h1>
-            <div style="width: 800px;height:150px;"><canvas id="myChart01"></canvas></div>
-            <div id="legend-container01"></div>
-
-            <!-- 도넛차트 -->
-            <h1>도넛차트</h1>
-            <div style="width: 800px;height:250px;"><canvas id="myChart02"></canvas></div>
-            <div id="legend-container02"></div>
-
-            <!-- 바차트 -->
-            <h1>바차트</h1>
-            <div style="width: 800px;height:250px;"><canvas id="myChart03"></canvas></div>
+      <div class="s__row">
+        <h1>chart.js</h1>
+        <!-- 선차트 -->
+        <h1>선차트</h1>
+        <div>
+          <canvas id="myChart01" style="width: 100%; height: 150px"></canvas>
         </div>
+        <div id="legend-container01"></div>
+
+        <!-- 도넛차트 -->
+        <h1>도넛차트</h1>
+        <div style="width: 100%; height: 250px">
+          <canvas id="myChart02" style="margin: 0 auto"></canvas>
+        </div>
+        <div id="legend-container02"></div>
+
+        <!-- 바차트 -->
+        <h1>바차트</h1>
+        <div>
+          <canvas id="myChart03" style="width: 100%; height: 250px"></canvas>
+        </div>
+      </div>
     </div>
     <script src="../js/chart.js"></script>
     <script src="../js/main.js"></script>
-</body>
-
+  </body>
 </html>

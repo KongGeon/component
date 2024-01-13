@@ -149,6 +149,7 @@ const htmlLegendPlugin02 = {
       boxSpan.style.display = "inline-block";
       boxSpan.style.flexShrink = 0;
       boxSpan.style.height = "14px";
+      boxSpan.style.marginTop = "4px";
       boxSpan.style.borderRadius = "2px";
       boxSpan.style.marginRight = "10px";
       boxSpan.style.width = "14px";
@@ -163,6 +164,8 @@ const htmlLegendPlugin02 = {
       textContainer.style.color = item.fontColor;
       textContainer.style.margin = 0;
       textContainer.style.padding = 0;
+      textContainer.style.fontWeight = 700;
+      textContainer.style.cursor = "pointer";
       textContainer.style.textDecoration = item.hidden ? "line-through" : "";
 
       const text = document.createTextNode(item.text);
@@ -197,7 +200,6 @@ const htmlLegendPlugin02 = {
     });
   },
 };
-
 
 // ----------------선 차트----------------
 const dataWeek = {
@@ -294,7 +296,6 @@ const config = {
 const ctx = document.getElementById("myChart01");
 new Chart(ctx, config);
 
-
 // ----------------도넛 차트----------------
 
 const data02 = {
@@ -324,37 +325,36 @@ const config02 = {
 const ctx02 = document.getElementById("myChart02");
 new Chart(ctx02, config02);
 
-
 // ----------------바 차트----------------
 
 const data03 = {
-  labels:  monthAddNumber(31),
+  labels: monthAddNumber(31),
   datasets: [
     {
-      label: 'Fully Rounded',
+      label: "Fully Rounded",
       data: generateRandomNumbers(31, 100, 200),
       borderColor: "#733BEA",
       backgroundColor: "#733BEA",
       borderWidth: 2,
       // borderRadius: ,
       // borderSkipped: ,
-    }
-  ]
+    },
+  ],
 };
 const config03 = {
-  type: 'bar',
+  type: "bar",
   data: data03,
   options: {
     responsive: true,
     plugins: {
       legend: {
-        position: 'top',
+        position: "top",
       },
       title: {
         display: true,
-        text: 'Chart.js Bar Chart'
-      }
-    }
+        text: "Chart.js Bar Chart",
+      },
+    },
   },
 };
 const ctx03 = document.getElementById("myChart03");
