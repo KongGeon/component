@@ -11,7 +11,7 @@
     padding: 12px 16px;
     display: block;
 }
-.s__tab02-title-wrap .s__tab02-title.active-on{
+.s__tab02-title-wrap .s__tab02-title.is-active{
     border-bottom: 2px solid var(--main);
     color: var(--main);
     font-weight: 700;
@@ -19,7 +19,7 @@
 .s__teb-contents {
      display: none;
 }
-.s__teb-contents.active-on{
+.s__teb-contents.is-active{
     display: block;
 }
 /* PC (해상도 1024px)*/

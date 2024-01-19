@@ -53,7 +53,7 @@ header.s__header .s__row {
   height: 0;
   transition: all 0.2s;
 }
-.menu-link:hover .pc-menu__step1 + ul, .s__pc-header-wrap.menu-on .menu-link ul {
+.menu-link:hover .pc-menu__step1 + ul, .s__pc-header-wrap.is-open .menu-link ul {
   height: auto;
   max-height: 200px;
 }
@@ -67,7 +67,7 @@ header.s__header .s__row {
   transition: opacity 0.3s;
   transition-delay: 0.3s;
 }
-.menu-link:hover .pc-menu__step1 + ul a, .s__pc-header-wrap.menu-on .menu-link ul a {
+.menu-link:hover .pc-menu__step1 + ul a, .s__pc-header-wrap.is-open .menu-link ul a {
   opacity: 1;
 }
 .pc-menu {
@@ -90,7 +90,7 @@ header.s__header .s__row {
   transition: all 0.3s;
   border-bottom: 1px solid var(--border);
 }
-.s__pc-header-wrap.menu-on + .pc-menu-bg{
+.s__pc-header-wrap.is-open + .pc-menu-bg{
   top: 0;
 }
 

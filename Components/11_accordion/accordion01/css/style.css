@@ -2,14 +2,15 @@
 .s__accordion01-wrap{
 border-top: 1px solid var(--border);
 }
-.s__accordion01-title > a{
+.s__accordion01-title > button{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 16px;
     border-bottom: 1px solid var(--border);
+    width: 100%;
 }
-.s__accordion01-title > a > img {
+.s__accordion01-title > button > img {
     width: 24px;
     transition: all 0.3s;
 }
@@ -19,12 +20,12 @@ border-top: 1px solid var(--border);
     overflow: hidden;
     transition: max-height 0.3s;
 }
-.active-on .s__accordion01-contents{
+.is-active .s__accordion01-contents{
     border-bottom: 1px solid var(--border);
     /* max-height는 가변적 */
     max-height: 200px;
 }
-.active-on .s__accordion01-title > a > img{
+.is-active .s__accordion01-title > button > img{
     transform: rotate(180deg);
 }
 .s__accordion01-contents > div {

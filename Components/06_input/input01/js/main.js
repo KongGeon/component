@@ -18,7 +18,9 @@ for (let i = 0; i < phoneNum.length; i++) {
 //싱글 파일첨부
 const fileUploads = document.querySelectorAll('input[type="file"]:not([multiple])');
 if (fileUploads) {
-    fileUploads.forEach((fileInput) => {
+  fileUploads.forEach((fileInput) => {
+    const fileLabel = fileInput.nextElementSibling
+    console.log(fileLabel)
         fileInput.addEventListener("change", () => {
             let file = fileInput.files;
             const fileName = file[0].name
@@ -34,6 +36,7 @@ if (fileUploads) {
             // `
 
         })
+      
     })
 }
 //멀티 파일첨부

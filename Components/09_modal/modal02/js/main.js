@@ -3,7 +3,7 @@ const popupSlider = document.querySelector(".popup-slider");
 
 // 광고팝업닫기
 popupSliderCloseBtn.addEventListener("click", () => {
-  popupSlider.classList.remove("active-on");
+  popupSlider.classList.remove("is-active");
 });
 
 function toggleMainPopup() {
@@ -111,7 +111,7 @@ function toggleMainPopup() {
           );
 
           if (popupSlideBtns.length == popupSlideclickBtns.length) {
-            popupSlider.classList.remove("active-on");
+            popupSlider.classList.remove("is-active");
           } else {
             popupSwiper.slideNext();
           }

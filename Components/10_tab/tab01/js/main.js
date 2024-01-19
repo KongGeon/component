@@ -5,10 +5,10 @@ tabList.forEach(e => {
     e.addEventListener('click', () => {
         tabList.forEach(t => {
             if (t.dataset.tab === thisTabName) {
-                t.classList.remove('active-on')
+                t.classList.remove('is-active')
             }
         })
-        e.classList.add('active-on')
+        e.classList.add('is-active')
     }
 
     )

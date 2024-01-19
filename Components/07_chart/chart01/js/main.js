@@ -18,29 +18,29 @@ function monthAddNumber(num) {
   return Numbers; //['1 Jan', '2 Jan', ... 'num Jan']
 }
 //Week Month 탭 버튼 이벤트
-const dataBtn = document.querySelectorAll(".btn-week-month a");
-for (let i = 0; i < dataBtn.length; i++) {
-  const d = dataBtn[i];
-  d.addEventListener("click", () => {
-    dataBtn.forEach((e) => {
-      e.classList.remove("tab-on");
-    });
-    d.classList.add("tab-on");
-    if (d.innerText === "Week") {
-      //week일때
-      myChart.setOption(option0102);
-    } else {
-      //month일때
-      myChart.setOption(option0101);
-    }
-  });
-}
+// const dataBtn = document.querySelectorAll(".btn-week-month a");
+// for (let i = 0; i < dataBtn.length; i++) {
+//   const d = dataBtn[i];
+//   d.addEventListener("click", () => {
+//     dataBtn.forEach((e) => {
+//       e.classList.remove("tab-on");
+//     });
+//     d.classList.add("tab-on");
+//     if (d.innerText === "Week") {
+//       //week일때
+//       myChart.setOption(option0102);
+//     } else {
+//       //month일때
+//       myChart.setOption(option0101);
+//     }
+//   });
+// }
 
 // ----------------선 차트----------------
 
-var chartDom = document.getElementById("myChart01");
-var myChart = echarts.init(chartDom);
-var option01;
+let chartDom = document.getElementById("myChart01");
+let myChart = echarts.init(chartDom);
+let option01;
 
 option01 = {
   tooltip: {
@@ -98,9 +98,9 @@ myChart.setOption(option01);
 
 // ----------------도넛 차트----------------
 
-var chartDom02 = document.getElementById("myChart02");
-var myChart02 = echarts.init(chartDom02);
-var option02;
+let chartDom02 = document.getElementById("myChart02");
+let myChart02 = echarts.init(chartDom02);
+let option02;
 
 option02 = {
   tooltip: {
@@ -145,12 +145,11 @@ option02 = {
 };
 
 myChart02.setOption(option02);
-
 // ----------------바 차트----------------
 
-var chartDom03 = document.getElementById("myChart03");
-var myChart03 = echarts.init(chartDom03);
-var option03;
+let chartDom03 = document.getElementById("myChart03");
+let myChart03 = echarts.init(chartDom03);
+let option03;
 option03 = {
   tooltip: {
     trigger: "axis",
@@ -204,3 +203,10 @@ option03 = {
   ],
 };
 myChart03.setOption(option03);
+
+
+window.onresize = function() {//반응형
+  myChart.resize(); 
+  myChart02.resize(); 
+  myChart03.resize(); 
+};

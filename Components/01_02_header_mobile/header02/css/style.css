@@ -32,13 +32,13 @@ header .s__row {
 .mobile-menu ul ul {
   display: none;
 }
-.mobile-menu ul ul.menu-on {
+.mobile-menu ul ul.is-open {
   display: block;
 }
 .mobile-menu__list {
   display: none;
 }
-.mobile-menu__list.menu-on {
+.mobile-menu__list.is-open {
   display: block;
   height: 100vh;
   background-color: #fff;
@@ -54,10 +54,10 @@ header .s__row {
   width: 24px;
   transition: all 0.3s;
 }
-.mobile-menu__step1.menu-on > img {
+.mobile-menu__step1.is-open > img {
   transform: rotate(180deg);
 }
-.mobile-menu__step1.menu-on + ul {
+.mobile-menu__step1.is-open + ul {
   display: block;
   text-align: center;
 }
@@ -72,20 +72,20 @@ header .s__row {
   width: 24px;
   transition: all 0.3s;
 }
-.mobile-menu__step1.menu-on + ul {
+.mobile-menu__step1.is-open + ul {
   border-bottom: 1px solid var(--border);
   background-color: #f7f7f7;
 }
-.mobile-menu__step2.menu-on > img {
+.mobile-menu__step2.is-open > img {
   transform: rotate(180deg);
 }
-.icon-menu-off {
+.icon-is-close {
   display: none;
 }
-.menu.menu-on .icon-menu-on {
+.menu.is-open .icon-is-open {
   display: none;
 }
-.menu.menu-on .icon-menu-off {
+.menu.is-open .icon-is-close {
   display: block;
 }
 .mobile-menu__step3{
@@ -98,7 +98,7 @@ header .s__row {
 .mobile-menu__step2 + ul {
   background-color: #fff;
 }
-.mobile-menu__step2.menu-on + ul {
+.mobile-menu__step2.is-open + ul {
   display: block;
 }
 @media (max-width: 1600px) {

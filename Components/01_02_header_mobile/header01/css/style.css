@@ -32,13 +32,13 @@ header .s__row {
 .mobile-menu ul ul {
   display: none;
 }
-.mobile-menu ul ul.menu-on {
+.mobile-menu ul ul.is-open {
   display: block;
 }
 .mobile-menu__list {
   display: none;
 }
-.mobile-menu__list.menu-on {
+.mobile-menu__list.is-open {
   display: block;
   height: 100vh;
   background-color: #fff;
@@ -50,7 +50,7 @@ header .s__row {
   padding: 16px;
   /* border-bottom: 1px solid var(--border); */
 }
-.mobile-menu__step1.menu-on + ul {
+.mobile-menu__step1.is-open + ul {
   display: block;
   text-align: center;
 }
@@ -61,18 +61,18 @@ header .s__row {
   width: 100%;
   padding: 12px;
 }
-.mobile-menu__step1.menu-on + ul {
+.mobile-menu__step1.is-open + ul {
   /* border-bottom: 1px solid var(--border); */
   background-color: #f7f7f7;
 }
 
-.icon-menu-off{
+.icon-is-close{
   display: none;
 }
-.menu.menu-on .icon-menu-on{
+.menu.is-open .icon-is-open{
   display: none;
 }
-.menu.menu-on .icon-menu-off{
+.menu.is-open .icon-is-close{
   display: block;
 }
 

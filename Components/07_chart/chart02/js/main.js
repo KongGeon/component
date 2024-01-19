@@ -29,11 +29,10 @@ const getOrCreateLegendList = (chart, id) => {
     listContainer = document.createElement("ul");
     listContainer.style.display = "flex";
     listContainer.style.justifyContent = "center";
-
     listContainer.style.flexDirection = "row";
     listContainer.style.margin = "16px 0 24px 0";
     listContainer.style.padding = 0;
-
+    listContainer.style.flexWrap = "wrap";
     legendContainer.appendChild(listContainer);
   }
 
@@ -265,6 +264,7 @@ const config = {
   type: "line",
   data: dataMonth,
   options: {
+    maintainAspectRatio: false,  //반응형
     responsive: true,
     plugins: {
       htmlLegend: {
@@ -310,6 +310,7 @@ const config02 = {
   type: "doughnut",
   data: data02,
   options: {
+    maintainAspectRatio: false, //반응형
     responsive: true,
     plugins: {
       htmlLegend: {
@@ -345,6 +346,7 @@ const config03 = {
   type: "bar",
   data: data03,
   options: {
+    maintainAspectRatio: false, //반응형
     responsive: true,
     plugins: {
       legend: {

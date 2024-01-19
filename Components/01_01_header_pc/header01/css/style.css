@@ -54,7 +54,7 @@ header.s__header .s__row {
   padding: 0 24px;
   font-weight: 500;
 }
-.pc-menu__step1.menu-on + ul,
+.pc-menu__step1.is-open + ul,
 .menu-link > li:hover > ul {
   display: block;
   border: 1px solid var(--border);
@@ -63,7 +63,7 @@ header.s__header .s__row {
   animation-duration: 2s;
   border-radius: 0 0 4px 4px;
 }
-.pc-menu__step1.menu-on + ul a,
+.pc-menu__step1.is-open + ul a,
 .menu-link > li:hover > ul a {
   display: flex;
   align-items: center;

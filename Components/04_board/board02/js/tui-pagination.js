@@ -672,10 +672,10 @@ var defaultOption = {
  *      firstItemClassName: 'tui-first-child',
  *      lastItemClassName: 'tui-last-child',
  *      template: {
- *          page: '<a href="#" class="tui-page-btn">{{page}}</a>',
+ *          page: '<a href="#!" class="tui-page-btn">{{page}}</a>',
  *          currentPage: '<strong class="tui-page-btn tui-is-selected">{{page}}</strong>',
  *          moveButton:
- *              '<a href="#" class="tui-page-btn tui-{{type}}">' +
+ *              '<a href="#!" class="tui-page-btn tui-{{type}}">' +
  *                  '<span class="tui-ico-{{type}}">{{type}}</span>' +
  *              '</a>',
  *          disabledMoveButton:
@@ -683,7 +683,7 @@ var defaultOption = {
  *                  '<span class="tui-ico-{{type}}">{{type}}</span>' +
  *              '</span>',
  *          moreButton:
- *              '<a href="#" class="tui-page-btn tui-{{type}}-is-ellip">' +
+ *              '<a href="#!" class="tui-page-btn tui-{{type}}-is-ellip">' +
  *                  '<span class="tui-ico-ellip">...</span>' +
  *              '</a>'
  *      }
@@ -1836,10 +1836,10 @@ var isHTMLNode = __webpack_require__(28);
 var util = __webpack_require__(9);
 
 var defaultTemplate = {
-  page: '<a href="#" class="tui-page-btn">{{page}}</a>',
+  page: '<a href="#!" class="tui-page-btn">{{page}}</a>',
   currentPage: '<strong class="tui-page-btn tui-is-selected">{{page}}</strong>',
   moveButton:
-    '<a href="#" class="tui-page-btn tui-{{type}}">' +
+    '<a href="#!" class="tui-page-btn tui-{{type}}">' +
     '<span class="tui-ico-{{type}}">{{type}}</span>' +
     '</a>',
   disabledMoveButton:
@@ -1847,7 +1847,7 @@ var defaultTemplate = {
     '<span class="tui-ico-{{type}}">{{type}}</span>' +
     '</span>',
   moreButton:
-    '<a href="#" class="tui-page-btn tui-{{type}}-is-ellip">' +
+    '<a href="#!" class="tui-page-btn tui-{{type}}-is-ellip">' +
     '<span class="tui-ico-ellip">...</span>' +
     '</a>'
 };

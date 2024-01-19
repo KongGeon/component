@@ -5,13 +5,13 @@ tabList02.forEach(e => {
     const thisTabName = e.dataset.tab
     e.addEventListener('click', () => {
         tabList02.forEach(t => {
-            t.classList.remove('active-on')
+            t.classList.remove('is-active')
         })
         tabContents02.forEach(t => {
-            t.classList.remove('active-on')
+            t.classList.remove('is-active')
         })
-        e.classList.add('active-on')
-        document.getElementById(thisTabName).classList.add('active-on')
+        e.classList.add('is-active')
+        document.getElementById(thisTabName).classList.add('is-active')
     }
 
     )
