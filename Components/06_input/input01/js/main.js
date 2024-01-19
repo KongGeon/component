@@ -36,7 +36,12 @@ if (fileUploads) {
             // `
 
         })
-      
+    fileInput.addEventListener("focusin", () => { 
+
+    })
+    fileInput.addEventListener("focusout", () => { 
+
+    })
     })
 }
 //멀티 파일첨부
