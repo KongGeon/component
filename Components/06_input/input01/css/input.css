@@ -54,56 +54,78 @@ input[type="number"]::-webkit-inner-spin-button {
 .s__radio + .s__radio {
   margin-left: 16px;
 }
+.s__checkbox input{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0 none;
+}
+.s__checkbox input:focus ~ label{
+  border: 2px solid var(--black);
+  height: 28px;
+}
 .s__checkbox input + label {
-  width: 24px;
   height: 24px;
   display: block;
-  background: url(../image/icon_checkbox_off.svg);
+  background: url(../image/icon_checkbox_off.svg) no-repeat;
   background-size: contain;
   cursor: pointer;
+  font-size: 16px;
+  padding-left: 32px;
+  border-radius: 4px;
 }
 .s__checkbox input:disabled + label {
-  background: url(../image/icon_checkbox_off_disabled.svg);
+  background: url(../image/icon_checkbox_off_disabled.svg) no-repeat;
   background-size: contain;
 }
 .s__checkbox input:checked + label {
-  background: url(../image/icon_checkbox_on.svg);
+  background: url(../image/icon_checkbox_on.svg) no-repeat;
   background-size: contain;
 }
 .s__checkbox input:checked:disabled + label {
-  background: url(../image/icon_checkbox_on_disabled.svg);
+  background: url(../image/icon_checkbox_on_disabled.svg) no-repeat;
   background-size: contain;
-}
-.s__checkbox input + label + label {
-  font-size: 16px;
-  cursor: pointer;
-  margin-left: 8px;
 }
 
+.s__radio input{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0 none;
+}
+.s__radio input:focus ~ label{
+  border: 2px solid var(--black);
+  height: 28px;
+}
 .s__radio input + label {
-  width: 24px;
   height: 24px;
   display: block;
-  background: url(../image/icon_radio_off.svg);
+  background: url(../image/icon_radio_off.svg) no-repeat;
   background-size: contain;
   cursor: pointer;
+  font-size: 16px;
+  padding-left: 32px;
+  border-radius: 4px;
 }
 .s__radio input:disabled + label {
-  background: url(../image/icon_radio_off_disabled.svg);
+  background: url(../image/icon_radio_off_disabled.svg) no-repeat;
   background-size: contain;
 }
 .s__radio input:checked + label {
-  background: url(../image/icon_radio_on.svg);
+  background: url(../image/icon_radio_on.svg) no-repeat;
   background-size: contain;
 }
 .s__radio input:checked:disabled + label {
-  background: url(../image/icon_radio_on_disabled.svg);
+  background: url(../image/icon_radio_on_disabled.svg) no-repeat;
   background-size: contain;
-}
-.s__radio input + label + label {
-  font-size: 16px;
-  cursor: pointer;
-  margin-left: 8px;
 }
 /* 데이트피커 */
 .s__date, .s__date-range{
@@ -215,7 +237,7 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-top: 8px;
   text-align: right;
 }
-/* 버튼 */
+/* 파일 버튼 */
 .s__file-wrap .s__btn {
   padding: 8px 16px;
   font-size: 16px;
@@ -227,8 +249,33 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 80px;
   text-align: center;
 }
-
+.s__file-wrap input[type="file"]:focus ~ .s__btn{
+  border: 2px solid var(--black);
+}
+.s__file-wrap input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0 none;
+}
 /* 토글스위치 */
+.s__switch input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0 none;
+}
+.s__switch input[type="checkbox"]:focus ~ .toggleSwitch{
+  border: 2px solid var(--black);
+}
 .toggleSwitch {
     width: 46px;
     height: 24px;

@@ -84,7 +84,7 @@ initial-scale=1.0">
         </div>
         <p>토글스위치</p>
         <div class="s__switch">
-            <input type="checkbox" id="toggle" hidden>
+            <input type="checkbox" id="toggle">
             <label for="toggle" class="toggleSwitch">
                 <span class="toggleButton"></span>
             </label>
@@ -100,31 +100,26 @@ initial-scale=1.0">
         <p>체크박스</p>
         <div class="s__checkbox-wrap">
             <div class="s__checkbox">
-                <input type="checkbox" class="s__checkbox-total" id="ch01_all" hidden>
-                <label for="ch01_all"></label>
-                <label for="ch01_01">checkboxAll</label>
+                <input type="checkbox" class="s__checkbox-total" id="ch01_all">
+                <label for="ch01_all">checkboxAll</label>
             </div>
             <div class="s__checkbox">
-                <input type="checkbox" class="s__checkbox-ck" id="ch01_01" hidden checked>
-                <label for="ch01_01"></label>
+                <input type="checkbox" class="s__checkbox-ck" id="ch01_01" checked>
                 <label for="ch01_01">checkbox</label>
             </div>
             <div class="s__checkbox">
-                <input type="checkbox" class="s__checkbox-ck" id="ch01_02" hidden>
-                <label for="ch01_02"></label>
+                <input type="checkbox" class="s__checkbox-ck" id="ch01_02">
                 <label for="ch01_02">checkbox</label>
             </div>
         </div>
         <p>라디오</p>
         <div class="s__radio-wrap">
             <div class="s__radio">
-                <input type="radio" class="" name="ra01" id="ra01_01" hidden checked>
-                <label for="ra01_01"></label>
+                <input type="radio" name="ra01" id="ra01_01" checked>
                 <label for="ra01_01">radio</label>
             </div>
             <div class="s__radio">
-                <input type="radio" class="" name="ra01" id="ra01_02" hidden>
-                <label for="ra01_02"></label>
+                <input type="radio" name="ra01" id="ra01_02">
                 <label for="ra01_02">radio</label>
             </div>
         </div>
@@ -139,6 +134,7 @@ initial-scale=1.0">
         // 싱글 데이트피커
         $('.s__date').daterangepicker({
             singleDatePicker: true,
+            buttonImageOnly: false,
             "minYear": 1000, "maxYear": 9999,
             "locale": {
                 "format": 'YYYY-MM-DD',

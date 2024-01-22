@@ -4,48 +4,47 @@
 //     object.value = object.value.slice(0, object.maxLength);
 //   }
 // }
-const phoneNum = document.querySelectorAll('.s__input_phone')
+const phoneNum = document.querySelectorAll(".s__input_phone");
 for (let i = 0; i < phoneNum.length; i++) {
   const p = phoneNum[i];
-  p.addEventListener('input', function (e) {
-    const object = e.target
+  p.addEventListener("input", function (e) {
+    const object = e.target;
     if (object.value.length > object.maxLength) {
       object.value = object.value.slice(0, object.maxLength);
     }
-  })
+  });
 }
 
 //싱글 파일첨부
-const fileUploads = document.querySelectorAll('input[type="file"]:not([multiple])');
+const fileUploads = document.querySelectorAll(
+  'input[type="file"]:not([multiple])'
+);
 if (fileUploads) {
   fileUploads.forEach((fileInput) => {
-    const fileLabel = fileInput.nextElementSibling
-    console.log(fileLabel)
-        fileInput.addEventListener("change", () => {
-            let file = fileInput.files;
-            const fileName = file[0].name
-            const fileSize = (file[0].size / (1024 * 1024)).toFixed(1);
-             // p 태그 생성
-          const fileGetListName = document.createElement("p");
-          fileGetListName.className = "file__get__list__name";
-          fileGetListName.textContent = `${fileName} (${fileSize}MB)`;
-          fileInput.parentNode.parentNode.querySelector('.s__singlefile-list').innerHTML = ''//초기화
-          fileInput.parentNode.parentNode.querySelector('.s__singlefile-list').appendChild(fileGetListName);
-            // fileInput.parentNode.parentNode.querySelector('.s__singlefile-list').innerHTML = `
-            // <p class="file__get__list__name">${fileName} (${fileSize}MB)</p>
-            // `
-
-        })
-    fileInput.addEventListener("focusin", () => { 
-
-    })
-    fileInput.addEventListener("focusout", () => { 
-
-    })
-    })
+    fileInput.addEventListener("change", () => {
+      let file = fileInput.files;
+      const fileName = file[0].name;
+      const fileSize = (file[0].size / (1024 * 1024)).toFixed(1);
+      // p 태그 생성
+      const fileGetListName = document.createElement("p");
+      fileGetListName.className = "file__get__list__name";
+      fileGetListName.textContent = `${fileName} (${fileSize}MB)`;
+      fileInput.parentNode.parentNode.querySelector(
+        ".s__singlefile-list"
+      ).innerHTML = ""; //초기화
+      fileInput.parentNode.parentNode
+        .querySelector(".s__singlefile-list")
+        .appendChild(fileGetListName);
+      // fileInput.parentNode.parentNode.querySelector('.s__singlefile-list').innerHTML = `
+      // <p class="file__get__list__name">${fileName} (${fileSize}MB)</p>
+      // `
+    });
+  });
 }
 //멀티 파일첨부
-const fileMultiUploads = document.querySelectorAll('input[type="file"][multiple]');
+const fileMultiUploads = document.querySelectorAll(
+  'input[type="file"][multiple]'
+);
 
 if (fileMultiUploads) {
   fileMultiUploads.forEach((fileInput) => {
@@ -126,61 +125,59 @@ if (fileMultiUploads) {
 const textCounts = document.querySelectorAll(".js-text-count");
 
 function handlerTextCount() {
-    const countGroup = this.parentNode.parentNode;
-    const countTextGroup = countGroup.querySelector(".js-text-count-ck");
-    const countMax = this.dataset.max;
-    const countText = this.value.length;
+  const countGroup = this.parentNode.parentNode;
+  const countTextGroup = countGroup.querySelector(".js-text-count-ck");
+  const countMax = this.dataset.max;
+  const countText = this.value.length;
 
-    countTextGroup.innerText = `${countText}/${countMax}`;
+  countTextGroup.innerText = `${countText}/${countMax}`;
 
-    if (countText > countMax) {
-        countTextGroup.innerText = `${countMax}/${countMax}`;
-    }
+  if (countText > countMax) {
+    countTextGroup.innerText = `${countMax}/${countMax}`;
+  }
 }
 textCounts.forEach((elem) => {
-    elem.addEventListener("keyup", handlerTextCount);
-  });
+  elem.addEventListener("keyup", handlerTextCount);
+});
 
+// 체크박스
+const checkTotalBtns = document.querySelectorAll(".s__checkbox-total");
+const checkBtns = document.querySelectorAll(".s__checkbox-ck");
 
-  // 체크박스
-  const checkTotalBtns = document.querySelectorAll(".s__checkbox-total");
-  const checkBtns = document.querySelectorAll(".s__checkbox-ck");
+function handlerAgrTotal() {
+  const totalArea = this.closest(".s__checkbox-wrap");
+  const checkboxList = totalArea.querySelectorAll(".s__checkbox-ck");
 
-  function handlerAgrTotal() {
-    const totalArea = this.closest(".s__checkbox-wrap");
-    const checkboxList = totalArea.querySelectorAll(".s__checkbox-ck");
-
-    checkboxList.forEach((ckbox) => {
-      if (this.checked) {
-        ckbox.checked = true;
-        ckbox.value = "Y";
-      } else {
-        ckbox.checked = false;
-        ckbox.value = "N";
-      }
-    });
-  }
-
-  function handlerAgrCheck() {
-    const totalArea = this.closest(".s__checkbox-wrap");
-    const total = totalArea.querySelector(".s__checkbox-total");
-    const checkboxes = totalArea.querySelectorAll(".s__checkbox-ck");
-    const checkboxSelect =
-      totalArea.querySelectorAll(".s__checkbox-ck:checked");
-
-    if (checkboxes.length === checkboxSelect.length) {
-      total.checked = true;
-      total.value = "Y";
+  checkboxList.forEach((ckbox) => {
+    if (this.checked) {
+      ckbox.checked = true;
+      ckbox.value = "Y";
     } else {
-      total.checked = false;
-      total.value = "N";
+      ckbox.checked = false;
+      ckbox.value = "N";
     }
+  });
+}
+
+function handlerAgrCheck() {
+  const totalArea = this.closest(".s__checkbox-wrap");
+  const total = totalArea.querySelector(".s__checkbox-total");
+  const checkboxes = totalArea.querySelectorAll(".s__checkbox-ck");
+  const checkboxSelect = totalArea.querySelectorAll(".s__checkbox-ck:checked");
+
+  if (checkboxes.length === checkboxSelect.length) {
+    total.checked = true;
+    total.value = "Y";
+  } else {
+    total.checked = false;
+    total.value = "N";
   }
+}
 
-  checkTotalBtns.forEach((total) => {
-    total.addEventListener("click", handlerAgrTotal);
-  });
+checkTotalBtns.forEach((total) => {
+  total.addEventListener("click", handlerAgrTotal);
+});
 
-  checkBtns.forEach((ck) => {
-    ck.addEventListener("click", handlerAgrCheck);
-  });
+checkBtns.forEach((ck) => {
+  ck.addEventListener("click", handlerAgrCheck);
+});
