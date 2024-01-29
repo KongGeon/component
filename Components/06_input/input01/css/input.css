@@ -12,6 +12,7 @@
     font-size: 14px;
     min-height: 36px;
 }
+/* select */
 .s__select {
   -webkit-appearance: none; /* for chrome */
   -moz-appearance: none; /*for firefox*/
@@ -29,6 +30,54 @@
 .s__select::-ms-expand {
   display: none; /*for IE10,11*/
 }
+
+.s__select-up{
+  position: relative;
+  display: block;
+}
+.s__select-up button {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 5px;
+  border: 1px solid #c2c2c2;
+  font-size: 16px;
+  min-height: 50px;
+  background: url("../image/icon_down_arrow.svg") no-repeat 97% 50%/18px auto;
+  background-color: #fff;
+  cursor: pointer;
+  text-align: left;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: auto;
+  bottom: 100%;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: auto;
+}
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: black;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+.dropdown-content a:hover{
+  background-color: var(--background);
+}
+.s__select-up.is-open button {
+  background-color: var(--background);
+}
+.s__select-up.is-open .dropdown-content {
+  display: block;
+}
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -143,7 +192,7 @@ input[type="number"]::-webkit-inner-spin-button {
   width: calc(100% - 88px);
 }
 .s__singlefile-wrap .file__get__list__name {
-  background-color: var(--backgroun);
+  background-color: var(--background);
 
   display: flex;
   align-items: center;

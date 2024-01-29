@@ -9,6 +9,11 @@ for (let i = 0; i < pcMenuBtn.length; i++) {
     });
     p.classList.add("is-open");
   });
+  p.addEventListener("mouseover", () => {
+    pcMenuBtn.forEach((e) => {
+      e.classList.remove("is-open");
+    });
+  });
 }
 let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
 let nextMenu = document.querySelector(".s__login"); //pc메뉴의 다음요소

@@ -55,10 +55,9 @@ if (fileMultiUploads) {
       if (fileArr != null && fileArr.length > 0) {
         // =====DataTransfer 파일 관리========
         for (let i = 0; i < fileArr.length; i++) {
-          // 기존 가지고 있던 파일들을 dataTransfer에 대입
+          
           const currentFile = fileArr[i];
 
-          // Check if the file is already in the dataTransfer.items
           let isDuplicate = false;
           for (let j = 0; j < dataTransfer.items.length; j++) {
             if (
@@ -70,7 +69,6 @@ if (fileMultiUploads) {
             }
           }
 
-          // If not a duplicate, add it to the dataTransfer
           if (!isDuplicate) {
             dataTransfer.items.add(currentFile);
           }
@@ -200,3 +198,13 @@ checkTotalBtns.forEach((total) => {
 checkBtns.forEach((ck) => {
   ck.addEventListener("click", handlerAgrCheck);
 });
+
+// 셀렉트(위)
+const selectUp = document.querySelectorAll('.s__select-up')
+for (let i = 0; i < selectUp.length; i++) {
+  const e = selectUp[i];
+  e.addEventListener('click', () => {
+    e.classList.toggle('is-open')
+  })
+  
+}
