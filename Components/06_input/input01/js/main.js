@@ -175,7 +175,6 @@ function handlerAgrTotal() {
     }
   });
 }
-
 function handlerAgrCheck() {
   const totalArea = this.closest(".s__checkbox-wrap");
   const total = totalArea.querySelector(".s__checkbox-total");

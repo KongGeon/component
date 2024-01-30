@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+/* board03 */
+.board03__list-wrap{
+    position: relative;
+}
+.board03__title{
+    font-size: 24px;
+    font-weight: bold;;
+    margin-bottom: 16px;
+}
+.board03__list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+}
+.board03__list .board03__img{
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+}
+.board03__list .board03__img::after{
+    content: '';
+    display: block;
+    padding-bottom: 66%;
+}
+.board03__list .board03__img > div{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.board03__list .board03__img img{
+    transition: transform 0.3s;
+    width: 100%;
+}
+.board03__list .board03__img:hover img{
+    transform: scale(1.2);
+}
+.board03__list a:hover p{
+    text-decoration: underline;
+}
+.board03__list a p{
+    font-size: 18px;
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-line-clamp:1 ;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.board03__list a span{
+    font-size: 14px;
+    opacity: 0.5;
+    display: -webkit-box;
+    -webkit-line-clamp:1 ;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.board03__more-btn{
+    position: absolute;
+    top: 8px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.board03__more-btn img {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+}
+/* board03 끝 */
+
+
+/* PC (해상도 1024px)*/ 
+@media all and (min-width:1024px) {
+    
+} 
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/ 
+@media all and (min-width:768px) and (max-width:1023px) {
+    .board03__list{
+        grid-template-columns: 1fr 1fr;
+    }
+} 
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/ 
+@media all and (max-width:767px) {
+    .board03__list{
+        grid-template-columns: 1fr;
+    }
+    .board03__list .board03__img:hover img{
+        transform: scale(1);
+    }
+    .board03__more-btn{
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: 8px;
+        margin-top: 24px;
+        border: 1px solid var(--border);
+    }
+}
+
+
