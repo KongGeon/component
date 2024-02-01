@@ -63,24 +63,77 @@ initial-scale=1.0">
                 <a href="https://www.daum.net/">다음</a>
             </div>
         </div>
+        <p>파일 드래그 앤 드롭(텍스트)</p>
+        <label for="multiDrag01_file" class="s__file-wrap s__drag-multi-file-wrap">
+            <div class="s__drag-multi-file-info">
+                <img src="/공통코드/image/icon_add_photo.svg" alt="이미지업로드">
+                <p>파일을 업로드해주세요.</p>
+            </div>
+            <input type="file" class="s__drag-multi-file" multiple id="multiDrag01_file"> 
+            <div class="s__file-list-wrap">
+                <ul class="s__drag-file-list" id="multiDrag01List"></ul>
+            </div>
+        </label>
+
+        <p>파일 드래그 앤 드롭(이미지)</p>
+        <label for="multiImgDrag01_file" class="s__file-wrap s__drag-multi-img-file-wrap">
+            <div class="s__drag-multi-file-info">
+                <img src="/공통코드/image/icon_add_photo.svg" alt="이미지업로드">
+                <p>이미지 파일을 업로드해주세요.</p>
+            </div>
+            <input type="file" class="s__drag-multi-img-file" multiple id="multiImgDrag01_file"  accept="image/*"> 
+            <div class="s__file-list-wrap">
+                <ul class="s__drag-img-file-list" id="multiImgDrag01List"></ul>
+            </div>
+        </label>
+
+        <p>멀티파일 이미지 미리보기</p>
+        <div class="s__file-wrap s__img-multi-file-wrap">
+            <div class="s__file-btn">
+                <input type="file" class="s__img-multi-file" multiple id="multiImg01_file" accept="image/*">
+                <label for="multiImg01_file" class="s__btn s__btn-line">업로드</label>
+            </div>
+            <div class="s__file-list-wrap">
+                <ul class="s__img-file-list" id="multiImg01List"></ul>
+            </div>
+        </div>
+       
+        <p>멀티파일 이미지 미리보기</p>
+        <div class="s__file-wrap s__img-multi-file-wrap">
+            <div class="s__file-btn">
+                <input type="file" class="s__img-multi-file" multiple id="multiImg01_file" accept="image/*">
+                <label for="multiImg01_file" class="s__btn s__btn-line">업로드</label>
+            </div>
+            <div class="s__file-list-wrap">
+                <ul class="s__img-file-list" id="multiImg01List"></ul>
+            </div>
+        </div>
+        <p>파일 이미지 미리보기</p>
+        <div class="s__file-wrap s__imgfile-wrap">
+            <div class="s__img-file-btn">
+                <img src="/공통코드/image/img_profile.svg" class="img-preview" alt="이미지"/>
+                <input type="file" class="s__img-file" id="imgBtnFile" accept="image/*">
+                <label for="imgBtnFile">이미지업로드</label>
+            </div>
+        </div>
         <p>파일</p>
         <div class="s__file-wrap s__singlefile-wrap">
             <div class="s__file-btn">
                 <input type="file" class="s__file" id="btnFile">
-                <label for="btnFile" class="s__btn">업로드</label>
+                <label for="btnFile" class="s__btn s__btn-line">업로드</label>
             </div>
             <div class="s__singlefile-list">
 
             </div>
         </div>
         <p>멀티파일</p>
-        <div class="s__file-wrap">
+        <div class="s__file-wrap s__multi-file-wrap">
             <div class="s__file-btn">
-                <input type="file" class="s__multi-file" multiple id="what_file">
-                <label for="what_file" class="s__btn">업로드</label>
+                <input type="file" class="s__multi-file" multiple id="multi01_file">
+                <label for="multi01_file" class="s__btn s__btn-line">업로드</label>
             </div>
             <div class="s__file-list-wrap">
-                <ul class="s__file-list" id="whatList"></ul>
+                <ul class="s__file-list" id="multi01List"></ul>
             </div>
         </div>
         <p>전화번호</p>

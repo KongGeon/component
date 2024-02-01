@@ -113,8 +113,8 @@ input[type="number"]::-webkit-inner-spin-button {
   clip: rect(0, 0, 0, 0);
   border: 0 none;
 }
-.s__checkbox input:focus ~ label{
-  border: 2px solid var(--black);
+.s__checkbox input:focus-visible ~ label{
+  outline: 2px solid var(--black);
   height: 28px;
 }
 .s__checkbox input + label {
@@ -150,8 +150,8 @@ input[type="number"]::-webkit-inner-spin-button {
   clip: rect(0, 0, 0, 0);
   border: 0 none;
 }
-.s__radio input:focus ~ label{
-  border: 2px solid var(--black);
+.s__radio input:focus-visible ~ label{
+  outline: 2px solid var(--black);
   height: 28px;
 }
 .s__radio input + label {
@@ -180,9 +180,119 @@ input[type="number"]::-webkit-inner-spin-button {
 .s__date, .s__date-range{
     background: url(../image/icon_date.svg) no-repeat 97% 50%/18px auto;
 }
+
+/* 드래그앤드롭 텍스트 */
+.s__drag-multi-file-wrap{
+  border: 2px dotted var(--border);
+  padding: 16px;
+  min-height: 150px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.s__drag-multi-file-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 24px;
+  width: 100%;
+}
+.s__drag-multi-file-wrap.is-active .s__drag-multi-file-info{
+  display: none;
+}
+.s__drag-multi-file-info img{
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+}
+.s__drag-multi-file-info p {
+  color: #bababa;
+}
+.s__drag-file-list li{
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  position: relative;
+  height: 48px;
+  margin: 6px 5px 6px 0;
+  padding: 0 24px;
+  border-radius: 24px;
+  max-width: 100%;
+  background-color: #fff;
+}
+.s__drag-multi-file-wrap .s__file-list-wrap{
+  width: 100%;
+}
+.s__drag-file-list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+/* 드래그앤드롭 이미지 */
+.s__drag-multi-img-file-wrap {
+  border: 2px dotted var(--border);
+  padding: 16px;
+  min-height: 150px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.s__drag-multi-file-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 24px;
+  width: 100%;
+}
+.s__drag-multi-img-file-wrap.is-active .s__drag-multi-file-info{
+  display: none;
+}
+.file-get-list-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+.s__drag-multi-file-info img{
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+}
+.s__drag-multi-file-info p {
+  color: #bababa;
+}
+.s__drag-img-file-list{
+  display: flex;
+}
+.s__drag-img-file-list li{
+  border: 1px solid var(--border);
+  margin: 6px 5px 6px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.remove_button {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+.s__drag-img-file-list li button {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  background-color: var(--black);
+  border-radius: 10px;
+}
+
 /* 싱글파일 */
-
-
 .s__singlefile-wrap {
   display: flex;
   align-items: center;
@@ -191,7 +301,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .s__singlefile-list {
   width: calc(100% - 88px);
 }
-.s__singlefile-wrap .file__get__list__name {
+.s__singlefile-wrap .file-get-list-name {
   background-color: var(--background);
 
   display: flex;
@@ -203,7 +313,7 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 4px;
   border: 1px solid var(--border);
 }
-/* 멀터파일 */
+/* 멀티파일 */
 .s__file-list {
   display: flex;
   flex-wrap: wrap;
@@ -218,7 +328,7 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 0 24px;
   border-radius: 24px;
 }
-.file__get__list__name {
+.file-get-list-name {
   font-size: 14px;
   font-weight: 400;
   color: #222;
@@ -230,7 +340,7 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-right: 12px;
   letter-spacing: -0.56px;
 }
-.file__get__list__name + button span {
+.remove_button span {
   position: absolute;
   width: 0;
   height: 0;
@@ -238,8 +348,8 @@ input[type="number"]::-webkit-inner-spin-button {
   overflow: hidden;
   text-indent: -9999px;
 }
-.file__get__list__name + button::before,
-.file__get__list__name + button::after {
+.remove_button::before,
+.remove_button::after {
   width: 14px;
   height: 2px;
   content: "";
@@ -249,17 +359,88 @@ input[type="number"]::-webkit-inner-spin-button {
   background: #ccc;
   border-radius: 2px;
 }
-.file__get__list__name + button::before {
+.remove_button::before {
   transform: translate(-50%, -50%) rotate(45deg);
 }
-.file__get__list__name + button::after {
+.remove_button::after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-.file__get__list__name + button {
+.remove_button {
   width: 20px;
   height: 20px;
   position: relative;
 }
+/* 멀티이미지파일 미리보기 */
+.s__img-file-list{
+  display: flex;
+}
+.s__img-file-list li{
+  border: 1px solid var(--border);
+  margin: 6px 5px 6px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.file-get-list-img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+.s__img-file-list li button{
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  background-color: var(--black);
+  border-radius: 10px;
+}
+.s__img-file-list .remove_button::before, .s__img-file-list .remove_button::after{
+  background-color: #fff;
+  width: 12px;
+}
+/* 이미지파일 미리보기 */
+.s__img-file-btn{
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  background-color: var(--white);
+}
+.s__img-file-btn label{
+  display: block;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background: url('/공통코드/image/icon_add_photo.svg') no-repeat 50% 50%;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.s__img-file-btn input:focus-visible + label {
+  outline: 2px solid var(--black);
+}
+.s__img-file-btn img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  object-fit: cover;
+}
+.s__imgfile-wrap .s__imgfile-list img{
+  width: 100px;
+  height: 100px;
+  margin-top: 16px;
+  border-radius: 8px;
+}
+/* 멀티이미지파일 미리보기 */
+
+
 /* 텍스트에어리어 */
 .s__textarea {
   padding: 12px 18px;
@@ -287,19 +468,29 @@ input[type="number"]::-webkit-inner-spin-button {
   text-align: right;
 }
 /* 파일 버튼 */
-.s__file-wrap .s__btn {
-  padding: 8px 16px;
+.s__btn {
+  margin: 2px;
   font-size: 16px;
-  border: 1px solid var(--main);
-  color: var(--main);
+  padding: 6px 20px 4px;
   border-radius: 4px;
-  display: inline-block;
+  transition: filter 0.3s;
   cursor: pointer;
-  width: 80px;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
 }
-.s__file-wrap input[type="file"]:focus ~ .s__btn{
-  border: 2px solid var(--black);
+.s__btn:hover {
+  filter: brightness(0.9);
+}
+.s__btn-line {
+  border: 1px solid var(--border);
+}
+.s__btn-line:hover {
+  background-color: #fefefe;
+}
+.s__file-wrap input[type="file"]:focus-visible ~ .s__btn{
+  outline: 2px solid var(--black);
 }
 .s__file-wrap input[type="file"] {
   position: absolute;
@@ -322,8 +513,8 @@ input[type="number"]::-webkit-inner-spin-button {
   clip: rect(0, 0, 0, 0);
   border: 0 none;
 }
-.s__switch input[type="checkbox"]:focus ~ .toggleSwitch{
-  border: 2px solid var(--black);
+.s__switch input[type="checkbox"]:focus-visible ~ .toggleSwitch{
+  outline: 2px solid var(--black);
 }
 .toggleSwitch {
     width: 46px;
