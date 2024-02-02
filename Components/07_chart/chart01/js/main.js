@@ -145,7 +145,7 @@ option02 = {
 };
 
 myChart02.setOption(option02);
-// ----------------바 차트----------------
+// ----------------바 차트(세로)----------------
 
 let chartDom03 = document.getElementById("myChart03");
 let myChart03 = echarts.init(chartDom03);
@@ -204,9 +204,68 @@ option03 = {
 };
 myChart03.setOption(option03);
 
+// ----------------바 차트(세로)----------------
+
+let chartDom04 = document.getElementById("myChart04");
+let myChart04 = echarts.init(chartDom04);
+let option04;
+option04 = {
+  tooltip: {
+    trigger: "axis",
+    axisPointer: {
+      type: "shadow",
+    },
+  },
+  grid: {
+    left: "3%",
+    right: "4%",
+    bottom: "3%",
+    containLabel: true, //여백없음
+  },
+  xAxis: [
+    {
+      type: "value", //타입 x, y축 바꾸면 가로 세로 바뀜
+      axisTick: {
+        //show: false, // x축 라벨선 제거
+        alignWithLabel: true, // 선 가운데로 맞춤
+      },
+      //   axisLine: {
+      //     show: false, // x축 선 제거
+      //   },
+      //   axisLabel: {
+      //     show: false, // x축 라벨 제거
+      //   },
+    },
+  ],
+  yAxis: [
+    {
+      type: "category", //타입 x, y축 바꾸면 가로 세로 바뀜
+      data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      // show: false, // y축 제거
+    },
+  ],
+  series: [
+    {
+      name: "Direct",
+      type: "bar",
+    //   barWidth: "60%", //바 넓이
+      data: [10, 52, 200, 334, 390, 330, 220],
+      },
+      {
+        name: "Direct",
+        type: "bar",
+        data: [1, 2, 20, 34, 39, 290, 20],
+        // itemStyle: {
+        //   borderRadius: [0, 20, 20, 0], //라디오스
+        // }
+      },
+  ],
+};
+myChart04.setOption(option04);
 
 window.onresize = function() {//반응형
   myChart.resize(); 
   myChart02.resize(); 
   myChart03.resize(); 
+  myChart04.resize(); 
 };

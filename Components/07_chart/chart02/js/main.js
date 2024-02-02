@@ -326,7 +326,7 @@ const config02 = {
 const ctx02 = document.getElementById("myChart02");
 new Chart(ctx02, config02);
 
-// ----------------바 차트----------------
+// ----------------바 차트(세로)----------------
 
 const data03 = {
   labels: monthAddNumber(31),
@@ -361,3 +361,40 @@ const config03 = {
 };
 const ctx03 = document.getElementById("myChart03");
 new Chart(ctx03, config03);
+
+// ----------------바 차트(가로))----------------
+
+const data04 = {
+  labels: monthAddNumber(7),
+  datasets: [
+    {
+      label: "Fully Rounded",
+      data: generateRandomNumbers(7, 100, 200),
+      borderColor: "#733BEA",
+      backgroundColor: "#733BEA",
+      borderWidth: 2,
+      // borderRadius: ,
+      // borderSkipped: ,
+    },
+  ],
+};
+const config04 = {
+  type: "bar",
+  data: data04,
+  options: {
+    maintainAspectRatio: false, //반응형
+    responsive: true,
+    indexAxis: 'y', //수평차트 만들기
+    plugins: {
+      legend: {
+        position: "top",
+      },
+      title: {
+        display: true,
+        text: "Chart.js Bar Chart",
+      },
+    },
+  },
+};
+const ctx04 = document.getElementById("myChart04");
+new Chart(ctx04, config04);
