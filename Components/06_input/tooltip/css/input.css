@@ -1,0 +1,44 @@
+@charset "utf-8";
+.tooltip {
+  position: fixed;
+  padding: 10px 20px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-align: center;
+  font: italic 14px/1.3 sans-serif;
+  color: #333;
+  background: #fff;
+  margin: 2px;
+}
+.s__btn {
+  margin: 2px;
+  font-size: 16px;
+  padding: 6px 20px 4px;
+  border-radius: 4px;
+  transition: filter 0.3s;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+}
+.s__btn-line {
+  border: 1px solid var(--black);
+
+  display: block;
+  position: absolute;
+  content: 'NEW';
+  padding: 4px;
+  background-color: var(--main);
+  color: #fff;
+
+}
+/* PC (해상도 1024px)*/
+@media all and (min-width: 1024px) {
+}
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (max-width: 1023px) {
+}
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@media all and (max-width: 767px) {
+}

@@ -1,0 +1,81 @@
+@charset "utf-8";
+.s__input {
+  padding: 12px 18px;
+  border-radius: 5px;
+  border: 1px solid #c2c2c2;
+  font-size: 16px;
+  min-height: 50px;
+}
+.s__input-small{
+    padding: 6px 14px;
+    font-size: 14px;
+    min-height: 36px;
+}
+.s__date, .s__date-range {
+  background: url(/공통코드//image/icon_date.svg) no-repeat 97% 50%/18px auto;
+}
+
+
+
+.range-date-wrap{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 데이트피커 커스텀 */
+.ui-widget.ui-widget-content{
+  border-radius: 8px;
+  border-color: #e8e8e8;
+  padding: 16px;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{
+  border: 1px solid #fff;
+}
+.ui-widget-header .ui-datepicker-next .ui-icon{
+  background-image: url(/공통코드/image/icon_right_arrow.svg);
+  background-size: contain;
+}
+.ui-widget-header .ui-datepicker-prev .ui-icon{
+  background-image: url(/공통코드/image/icon_left_arrow.svg);
+  background-size: contain;
+}
+.ui-widget-header
+.ui-icon-circle-triangle-e, .ui-icon-circle-triangle-w{
+  background-position: 0%;
+  cursor: pointer;
+}
+.ui-widget-header{
+  border: 0;
+  background-color: #fff;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+  background-color: #f7f7f7;
+  border-radius: 100%;
+  color: #454545;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+  background-color: #007fff;
+  color: #fff;
+  border-radius: 100%;
+}
+.ui-datepicker td span, .ui-datepicker td a{
+  width: 32px;
+  height: 32px;
+}
+/* PC (해상도 1024px)*/
+@media all and (min-width: 1024px) {
+}
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (max-width: 1023px) {
+}
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@media all and (max-width: 767px) {
+}

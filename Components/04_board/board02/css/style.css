@@ -1,23 +1,64 @@
 @charset "utf-8";
 
-/* board03 */
-
-
-/* board03 끝 */
-
-
-
-/* PC (해상도 1024px)*/ 
-@media all and (min-width:1024px) {
-    
-} 
-/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/ 
-@media all and (min-width:768px) and (max-width:1023px) {
-
-} 
-/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/ 
-@media all and (max-width:767px) {
-
+/* board02 */
+.tui-pagination .tui-first,
+.tui-pagination .tui-prev,
+.tui-pagination .tui-next,
+.tui-pagination .tui-last,
+.tui-pagination .tui-prev-is-ellip,
+.tui-pagination .tui-next-is-ellip {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
+.tui-grid-cell {
+  background-color: #fff !important;
+  border: 0;
+  border-bottom: 1px solid var(--border) !important;
+}
+.tui-grid-header-area {
+  border-color: var(--border) !important;
+}
+.tui-grid-cell-header {
+  background-color: var(--background) !important;
+}
+.tui-grid-border-line-top {
+  border-top: 1px solid var(--main) !important;
+}
+.tui-grid-no-scroll-x .tui-grid-border-line-bottom {
+  display: none;
+}
+.tui-pagination .tui-last-child.tui-is-selected {
+  border-right: 1px solid var(--main) !important;
+}
+.tui-pagination .tui-first-child.tui-is-selected,
+.tui-pagination .tui-last-child.tui-is-selected,
+.tui-pagination .tui-is-selected,
+.tui-pagination strong {
+  background: var(--main);
+  border-color: var(--main);
+  border-left: 1px solid var(--main);
+}
+.tui-pagination .tui-page-btn {
+  border-color: var(--border);
+}
+.tui-pagination .tui-is-selected:hover {
+  background-color: var(--main) !important;
+}
+input[type="checkbox"]:checked ~ .custom-input:before {
+  background: var(--main) !important;
+  border: 1px solid var(--main) !important;
+}
+/* board02 끝 */
 
+/* PC (해상도 1024px)*/
+@media all and (min-width: 1024px) {
+}
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+}
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@media all and (max-width: 767px) {
+}
