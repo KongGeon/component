@@ -12,7 +12,7 @@ function numCounter(num, max) {
     }
     const step = thisNum / 4; // 숫자 늘리면 더 느리게 올라갑니다
     thisNum -= step;
-  }, 50);
+  }, 30);
 }
 
 if (ani) {
